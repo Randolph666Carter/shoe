@@ -211,3 +211,53 @@ body {
       font-size: 1em;
       color: #263238;
       margin-bottom: 70px; }
+
+.model {
+  width: 100%;
+  background: #fff;
+  outline: 1px solid green; }
+  .model__wrap {
+    width: 90%;
+    outline: 1px solid yellow;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; }
+  .model__shoe {
+    flex-basis: 80%;
+    min-width: 500px;
+    height: 500px;
+    min-height: 500px;
+    background: transparent url("../img/nike4.png") no-repeat center;
+    background-size: contain;
+    outline: 1px solid red; }
+  .model__textplace {
+    flex-basis: 50%;
+    outline: 1px solid red;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start; }
+    .model__textplace--inner {
+      width: 100%;
+      outline: 1px solid red;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: row; }
+    .model__textplace--title {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #263238;
+      text-transform: uppercase; }
+    .model__textplace--text {
+      font-size: 1.1em;
+      color: #263238;
+      margin-bottom: 20px; }
+    .model__textplace--price {
+      font-size: 2em;
+      color: #F50057;
+      margin-right: 30px; }
+  .model__stars {
+    flex-basis: 50%;
+    height: 50px;
+    outline: 1px solid red; }

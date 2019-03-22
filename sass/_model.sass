@@ -1,0 +1,49 @@
+.model
+  width: 100%
+  background: $white
+  outline: 1px solid green
+  &__wrap
+    width: 90%
+    outline: 1px solid yellow
+    margin: 0 auto
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+  &__shoe
+    flex-basis: 80%
+    min-width: 500px
+    height: 500px
+    min-height: 500px
+    background: transparent url("../img/nike4.png") no-repeat center
+    background-size: contain
+    outline: 1px solid red
+  &__textplace
+    flex-basis: 50%
+    outline: 1px solid red
+    display: flex
+    flex-flow: column wrap
+    align-items: flex-start
+    &--inner
+      width: 100%
+      outline: 1px solid red
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      flex-direction: row
+    &--title
+      font-size: 2em
+      margin-bottom: 20px
+      color: $text-two
+      text-transform: uppercase
+    &--text
+      font-size: 1.1em
+      color: $text-two
+      margin-bottom: 20px
+    &--price
+      font-size: 2em
+      color: #F50057
+      margin-right: 30px
+  &__stars
+    flex-basis: 50%
+    height: 50px
+    outline: 1px solid red
