@@ -1,31 +1,30 @@
 .model
   width: 100%
+  height: 125vh
   background: $white
-  outline: 1px solid green
+  margin-bottom: 150px
   &__wrap
     width: 90%
-    outline: 1px solid yellow
+    height: 100vh
     margin: 0 auto
     display: flex
     flex-flow: row wrap
     justify-content: center
   &__shoe
     flex-basis: 80%
-    min-width: 500px
-    height: 500px
-    min-height: 500px
+    min-width: 200px
+    height: 100%
+    min-height: 200px
     background: transparent url("../img/nike4.png") no-repeat center
     background-size: contain
     outline: 1px solid red
   &__textplace
     flex-basis: 50%
-    outline: 1px solid red
     display: flex
     flex-flow: column wrap
     align-items: flex-start
     &--inner
       width: 100%
-      outline: 1px solid red
       display: flex
       justify-content: flex-start
       align-items: center
@@ -43,7 +42,33 @@
       font-size: 2em
       color: #F50057
       margin-right: 30px
+    &--button
+      width: 130px
   &__stars
     flex-basis: 50%
-    height: 50px
-    outline: 1px solid red
+    height: 100px
+    text-align: right
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: flex-end
+    &--list
+      width: 280px
+      height: 45px
+      box-shadow: 1px 1px 5px 0 rgba(0,0,0,.1)
+      display: flex
+      align-items: center
+      justify-content: space-around
+    &--list-item
+      font-size: 1em
+      display: inline-block
+      list-style: none
+    &--list-link
+      padding: 15px
+      text-decoration: none
+      color: $text-blue
+    &--review
+      font-size: 1.3em
+      font-weight: bold
+      text-decoration: none
+      color: $text-blue
