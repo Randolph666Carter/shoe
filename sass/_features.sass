@@ -1,6 +1,7 @@
 .features
   width: 100%
   height: 95vh
+  max-height: 800px
   background: #cdcdcd url("../img/back/back2.jpg") no-repeat center
   background-size: cover
   outline: 1px solid red
@@ -8,14 +9,13 @@
   z-index: 1
   &__cloud-down
     width: 100%
-    max-width: 1600px
-    min-height: 400px
+    height: 60vh
     background: url("../img/back/cloud-down2.png") no-repeat bottom center
     background-size: cover
     position: absolute
     bottom: 0
     transform: translateY(100%)
-    z-index: 999
+    z-index: 10
   &__shoe
     width: 70%
     min-width: 200px
@@ -24,12 +24,43 @@
     background: transparent url("../img/nike2.png") no-repeat center
     background-size: contain
     outline: 1px solid red
-    position: absolute
-    top: 60%
-    left: 45%
-    transform: translate(-40%, -53%)
+    margin: 0 auto
+    position: relative
+    &--text1
+      position: absolute
+      top: 30%
+      left: 5%
+      color: #08E0EF
+      font-size: 1em
+      font-weight: 700
+    &--text2
+      position: absolute
+      top: 10%
+      right: 15%
+      color: #08E0EF
+      font-size: 1em
+      font-weight: 700
+    &--text3
+      position: absolute
+      bottom: 60%
+      right: 5%
+      color: #08E0EF
+      font-size: 1em
+      font-weight: 700
   &__button
     position: absolute
     bottom: 0
     left: 15%
     transform: translateY(-85%)
+    z-index: 50
+
+@media (max-width: 900px)
+  .features
+    height: 60vh
+    &__cloud-down
+      height: 40vh
+    &__shoe
+      width: 100%
+      height: 100%
+    &--text1, &--text2, &--text3
+      font-size: 0.5em

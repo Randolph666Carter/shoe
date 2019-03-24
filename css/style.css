@@ -23,7 +23,7 @@ body {
 
 .hero {
   width: 100%;
-  min-height: 800px;
+  min-height: 700px;
   margin: 0 auto;
   background: url("../img/back/nike-text.png") no-repeat top center, #fff url("../img/back/back1.jpg") no-repeat top center;
   background-size: contain, cover;
@@ -31,7 +31,6 @@ body {
   z-index: 1; }
   .hero__header {
     width: 90%;
-    max-width: 1366px;
     height: 20vh;
     margin: 0 auto;
     display: flex;
@@ -55,16 +54,18 @@ body {
     height: 80vh;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-start; }
   .hero__textplace {
-    margin: 50px auto;
+    flex-basis: 36%;
+    margin-top: 100px;
     color: #00FFFC;
-    font-size: 1.3em; }
+    font-size: 1.5em; }
     .hero__textplace--text {
       margin-bottom: 70px; }
     .hero__textplace--button {
-      margin: 5px; }
+      margin: 5px;
+      margin-left: 0; }
   .hero__shoe {
     outline: 1px solid red;
     width: 60%;
@@ -75,13 +76,21 @@ body {
     background-size: contain; }
   .hero__cloud-down {
     width: 100%;
-    max-width: 1600px;
+    height: 25vh;
     min-height: 200px;
     background: url("../img/back/cloud-down1.png") no-repeat top center;
     background-size: cover;
     position: absolute;
     bottom: 0;
     z-index: 999; }
+
+@media (max-width: 900px) {
+  .hero {
+    height: 80vh; }
+    .hero__textplace {
+      font-size: 1em; }
+    .hero__shoe {
+      height: 50%; } }
 
 .button {
   width: 200px;
@@ -112,7 +121,8 @@ body {
     left: 300px;
     transition: .7s ease-in-out; }
   .button:active {
-    border-color: #fff; }
+    border-color: #fff;
+    outline: none; }
 
 .button-o {
   width: 200px;
@@ -143,11 +153,13 @@ body {
     left: 300px;
     transition: .7s ease-in-out; }
   .button-o:active {
-    border-color: #fff; }
+    border-color: #fff;
+    outline: none; }
 
 .features {
   width: 100%;
   height: 95vh;
+  max-height: 800px;
   background: #cdcdcd url("../img/back/back2.jpg") no-repeat center;
   background-size: cover;
   outline: 1px solid red;
@@ -155,14 +167,13 @@ body {
   z-index: 1; }
   .features__cloud-down {
     width: 100%;
-    max-width: 1600px;
-    min-height: 400px;
+    height: 60vh;
     background: url("../img/back/cloud-down2.png") no-repeat bottom center;
     background-size: cover;
     position: absolute;
     bottom: 0;
     transform: translateY(100%);
-    z-index: 999; }
+    z-index: 10; }
   .features__shoe {
     width: 70%;
     min-width: 200px;
@@ -171,20 +182,52 @@ body {
     background: transparent url("../img/nike2.png") no-repeat center;
     background-size: contain;
     outline: 1px solid red;
-    position: absolute;
-    top: 60%;
-    left: 45%;
-    transform: translate(-40%, -53%); }
+    margin: 0 auto;
+    position: relative; }
+    .features__shoe--text1 {
+      position: absolute;
+      top: 30%;
+      left: 5%;
+      color: #08E0EF;
+      font-size: 1em;
+      font-weight: 700; }
+    .features__shoe--text2 {
+      position: absolute;
+      top: 10%;
+      right: 15%;
+      color: #08E0EF;
+      font-size: 1em;
+      font-weight: 700; }
+    .features__shoe--text3 {
+      position: absolute;
+      bottom: 60%;
+      right: 5%;
+      color: #08E0EF;
+      font-size: 1em;
+      font-weight: 700; }
   .features__button {
     position: absolute;
     bottom: 0;
     left: 15%;
-    transform: translateY(-85%); }
+    transform: translateY(-85%);
+    z-index: 50; }
+
+@media (max-width: 900px) {
+  .features {
+    height: 60vh; }
+    .features__cloud-down {
+      height: 40vh; }
+    .features__shoe {
+      width: 100%;
+      height: 100%; }
+    .features--text1, .features--text2, .features--text3 {
+      font-size: 0.5em; } }
 
 .description {
   width: 100%;
-  height: 160vh;
-  background: url("../img/back/back3.png") no-repeat 42% center;
+  height: 140vh;
+  margin-top: 100px;
+  background: url("../img/back/back3.png") no-repeat 52% center;
   background-size: cover;
   display: flex;
   align-items: center; }
@@ -205,13 +248,11 @@ body {
     outline: 1px solid red;
     position: absolute;
     bottom: 0;
-    left: -50%;
-    transform: translateX(50%); }
+    left: -10%; }
   .description__textplace {
     position: absolute;
     right: 0;
-    bottom: 50%;
-    transform: translateY(50%);
+    bottom: 30%;
     width: 50%;
     text-align: center; }
     .description__textplace--title {

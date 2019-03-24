@@ -1,6 +1,6 @@
 .hero
   width: 100%
-  min-height: 800px
+  min-height: 700px
   margin: 0 auto
   background: url("../img/back/nike-text.png") no-repeat top center, #fff url("../img/back/back1.jpg") no-repeat top center
   background-size: contain, cover
@@ -8,7 +8,6 @@
   z-index: 1
   &__header
     width: 90%
-    max-width: 1366px
     height: 20vh
     margin: 0 auto
     display: flex
@@ -32,16 +31,18 @@
     height: 80vh
     margin: 0 auto
     display: flex
-    justify-content: space-between
+    justify-content: flex-end
     align-items: flex-start
   &__textplace
-    margin: 50px auto
+    flex-basis: 36%
+    margin-top: 100px
     color: #00FFFC
-    font-size: 1.3em
+    font-size: 1.5em
     &--text
       margin-bottom: 70px
     &--button
       margin: 5px
+      margin-left: 0
   &__shoe
     outline: 1px solid red
     width: 60%
@@ -52,10 +53,18 @@
     background-size: contain
   &__cloud-down
     width: 100%
-    max-width: 1600px
+    height: 25vh
     min-height: 200px
     background: url("../img/back/cloud-down1.png") no-repeat top center
     background-size: cover
     position: absolute
     bottom: 0
     z-index: 999
+
+@media (max-width: 900px)
+  .hero
+    height: 80vh
+    &__textplace
+     font-size: 1em
+    &__shoe
+     height: 50%
