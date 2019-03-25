@@ -447,7 +447,6 @@ body {
 @media (max-width: 650px) {
   .model__wrap {
     height: 70vh;
-    flex-flow: column nowrap;
     align-items: center;
     justify-content: center; }
   .model__shoe {
