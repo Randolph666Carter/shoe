@@ -1,60 +1,56 @@
 .features
   width: 100%
-  height: 95vh
-  max-height: 800px
+  height: 100vh
+  min-height: 650px
   background: #cdcdcd url("../img/back/back2.jpg") no-repeat center
   background-size: cover
-  outline: 1px solid red
   position: relative
   z-index: 1
   &__cloud-down
     width: 100%
     height: 60vh
-    background: url("../img/back/cloud-down2.png") no-repeat bottom center
+    background: url("../img/back/cloud-down2.png") no-repeat center
     background-size: cover
-    position: absolute
-    bottom: 0
-    transform: translateY(100%)
-    z-index: 10
+    position: relative
+    bottom: 15%
+    z-index: -1
   &__shoe
-    width: 70%
+    width: 80%
     min-width: 200px
     height: 90%
     min-height: 200px
     background: transparent url("../img/nike2.png") no-repeat center
     background-size: contain
-    outline: 1px solid red
     margin: 0 auto
     position: relative
     &--text1
       position: absolute
-      top: 30%
+      top: 25%
       left: 5%
       color: #08E0EF
-      font-size: 1em
+      font-size: 1.2em
       font-weight: 700
     &--text2
       position: absolute
-      top: 10%
-      right: 15%
+      top: 5%
+      right: 20%
       color: #08E0EF
-      font-size: 1em
+      font-size: 1.2em
       font-weight: 700
     &--text3
       position: absolute
       bottom: 60%
       right: 5%
       color: #08E0EF
-      font-size: 1em
+      font-size: 1.2em
       font-weight: 700
   &__button
     position: absolute
-    bottom: 0
-    left: 15%
-    transform: translateY(-85%)
+    bottom: 20%
+    left: 10%
     z-index: 50
 
-@media (max-width: 900px)
+@media (max-width: 1050px)
   .features
     height: 60vh
     &__cloud-down
@@ -62,5 +58,30 @@
     &__shoe
       width: 100%
       height: 100%
-    &--text1, &--text2, &--text3
-      font-size: 0.5em
+      &--text1
+        top: 30%
+      &--text2
+        top: 10%
+@media (max-width: 900px)
+  .features
+    &__shoe
+      &--text2
+        top: 15%
+@media (max-width: 750px)
+  .features
+    &__shoe
+      &--text1,&--text2,&--text3
+        font-size: 1em
+      &--text1
+        top: 35%
+        left: 2%
+      &--text2
+        top: 20%
+        right: 15%
+      &--text3
+        bottom: 55%
+@media (max-width: 650px)
+  .features
+    &__shoe
+      &--text2
+        top: 25%

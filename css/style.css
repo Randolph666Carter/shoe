@@ -23,7 +23,8 @@ body {
 
 .hero {
   width: 100%;
-  min-height: 700px;
+  height: 130vh;
+  min-height: 800px;
   margin: 0 auto;
   background: url("../img/back/nike-text.png") no-repeat top center, #fff url("../img/back/back1.jpg") no-repeat top center;
   background-size: contain, cover;
@@ -67,7 +68,6 @@ body {
       margin: 5px;
       margin-left: 0; }
   .hero__shoe {
-    outline: 1px solid red;
     width: 60%;
     min-width: 200px;
     height: 100%;
@@ -84,13 +84,48 @@ body {
     bottom: 0;
     z-index: 999; }
 
+@media (max-width: 1050px) {
+  .hero {
+    height: 80vh; }
+    .hero__textplace {
+      flex-basis: 45%;
+      font-size: 1em; }
+    .hero__shoe {
+      width: 55%;
+      height: 80%; } }
+
 @media (max-width: 900px) {
   .hero {
     height: 80vh; }
     .hero__textplace {
-      font-size: 1em; }
+      flex-basis: 35%; } }
+
+@media (max-width: 750px) {
+  .hero {
+    height: 60vh; }
+    .hero__main-wrap {
+      height: 60vh; }
+    .hero__textplace {
+      margin-top: 50px; } }
+
+@media (max-width: 650px) {
+  .hero {
+    height: 110vh; }
+    .hero__main-wrap {
+      position: relative;
+      width: 100%; }
+    .hero__textplace {
+      text-align: center;
+      flex-basis: 70%;
+      margin: 80% auto; }
+      .hero__textplace--text {
+        margin-bottom: 20px; }
     .hero__shoe {
-      height: 50%; } }
+      position: absolute;
+      top: -10%;
+      left: 0;
+      width: 100%;
+      height: 100%; } }
 
 .button {
   width: 200px;
@@ -158,61 +193,57 @@ body {
 
 .features {
   width: 100%;
-  height: 95vh;
-  max-height: 800px;
+  height: 100vh;
+  min-height: 650px;
   background: #cdcdcd url("../img/back/back2.jpg") no-repeat center;
   background-size: cover;
-  outline: 1px solid red;
   position: relative;
   z-index: 1; }
   .features__cloud-down {
     width: 100%;
     height: 60vh;
-    background: url("../img/back/cloud-down2.png") no-repeat bottom center;
+    background: url("../img/back/cloud-down2.png") no-repeat center;
     background-size: cover;
-    position: absolute;
-    bottom: 0;
-    transform: translateY(100%);
-    z-index: 10; }
+    position: relative;
+    bottom: 15%;
+    z-index: -1; }
   .features__shoe {
-    width: 70%;
+    width: 80%;
     min-width: 200px;
     height: 90%;
     min-height: 200px;
     background: transparent url("../img/nike2.png") no-repeat center;
     background-size: contain;
-    outline: 1px solid red;
     margin: 0 auto;
     position: relative; }
     .features__shoe--text1 {
       position: absolute;
-      top: 30%;
+      top: 25%;
       left: 5%;
       color: #08E0EF;
-      font-size: 1em;
+      font-size: 1.2em;
       font-weight: 700; }
     .features__shoe--text2 {
       position: absolute;
-      top: 10%;
-      right: 15%;
+      top: 5%;
+      right: 20%;
       color: #08E0EF;
-      font-size: 1em;
+      font-size: 1.2em;
       font-weight: 700; }
     .features__shoe--text3 {
       position: absolute;
       bottom: 60%;
       right: 5%;
       color: #08E0EF;
-      font-size: 1em;
+      font-size: 1.2em;
       font-weight: 700; }
   .features__button {
     position: absolute;
-    bottom: 0;
-    left: 15%;
-    transform: translateY(-85%);
+    bottom: 20%;
+    left: 10%;
     z-index: 50; }
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
   .features {
     height: 60vh; }
     .features__cloud-down {
@@ -220,19 +251,38 @@ body {
     .features__shoe {
       width: 100%;
       height: 100%; }
-    .features--text1, .features--text2, .features--text3 {
-      font-size: 0.5em; } }
+      .features__shoe--text1 {
+        top: 30%; }
+      .features__shoe--text2 {
+        top: 10%; } }
+
+@media (max-width: 900px) {
+  .features__shoe--text2 {
+    top: 15%; } }
+
+@media (max-width: 750px) {
+  .features__shoe--text1, .features__shoe--text2, .features__shoe--text3 {
+    font-size: 1em; }
+  .features__shoe--text1 {
+    top: 35%;
+    left: 2%; }
+  .features__shoe--text2 {
+    top: 20%;
+    right: 15%; }
+  .features__shoe--text3 {
+    bottom: 55%; } }
+
+@media (max-width: 650px) {
+  .features__shoe--text2 {
+    top: 25%; } }
 
 .description {
   width: 100%;
-  height: 140vh;
-  margin-top: 100px;
-  background: url("../img/back/back3.png") no-repeat 52% center;
-  background-size: cover;
-  display: flex;
-  align-items: center; }
+  height: 130vh;
+  min-height: 800px;
+  background: url("../img/back/back3.png") no-repeat center;
+  background-size: cover; }
   .description__wrap {
-    outline: 1px solid red;
     width: 90%;
     margin: 0 auto;
     height: 100vh;
@@ -242,10 +292,8 @@ body {
     min-width: 200px;
     height: 80%;
     min-height: 200px;
-    margin-top: 10%;
     background: transparent url("../img/nike3.png") no-repeat center;
     background-size: contain;
-    outline: 1px solid red;
     position: absolute;
     bottom: 0;
     left: -10%; }
@@ -264,10 +312,45 @@ body {
       color: #263238;
       margin-bottom: 70px; }
 
+@media (max-width: 1050px) {
+  .description {
+    background-position: 30% 50%; }
+    .description__textplace--title {
+      font-size: 3.0em; } }
+
+@media (max-width: 900px) {
+  .description__textplace--title {
+    font-size: 2.0em; }
+  .description__textplace--text {
+    font-size: 0.9em; } }
+
+@media (max-width: 750px) {
+  .description {
+    height: 90vh; }
+    .description__shoe {
+      width: 100%;
+      height: 50%;
+      position: relative;
+      top: 0;
+      left: 0; }
+    .description__textplace {
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+      top: 0;
+      left: 0; }
+      .description__textplace--title {
+        font-size: 2.0em; }
+      .description__textplace--text {
+        font-size: 1em; } }
+
 .model {
   width: 100%;
+  min-height: 800px;
   background: #fff;
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 40; }
   .model__wrap {
     width: 90%;
     height: 100vh;
@@ -278,11 +361,10 @@ body {
   .model__shoe {
     flex-basis: 80%;
     min-width: 200px;
-    height: 70%;
+    height: 60%;
     min-height: 200px;
     background: transparent url("../img/nike4.png") no-repeat center;
-    background-size: contain;
-    outline: 1px solid red; }
+    background-size: contain; }
   .model__textplace {
     flex-basis: 50%;
     display: flex;
@@ -339,6 +421,50 @@ body {
       text-decoration: none;
       color: #00ECF4; }
 
+@media (max-width: 1050px) {
+  .model {
+    min-height: 500px;
+    margin-bottom: 0; }
+    .model__wrap {
+      height: 60vh; }
+    .model__shoe {
+      height: 40%; }
+    .model__textplace--title {
+      font-size: 1.5em; } }
+
+@media (max-width: 900px) {
+  .model__shoe {
+    margin-bottom: 100px; }
+  .model__textplace--title {
+    font-size: 1.4em; } }
+
+@media (max-width: 750px) {
+  .model__textplace--title {
+    font-size: 1.3em; }
+  .model__textplace--text {
+    font-size: 1em; } }
+
+@media (max-width: 650px) {
+  .model__wrap {
+    height: 70vh;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center; }
+  .model__shoe {
+    width: 100%;
+    margin-bottom: 40px; }
+  .model__textplace {
+    align-items: center; }
+    .model__textplace--inner {
+      align-items: center;
+      justify-content: center; }
+  .model__stars {
+    margin-top: 0;
+    align-items: center;
+    justify-content: center; }
+    .model__stars--review {
+      margin-top: 20px; } }
+
 .footer {
   width: 100%;
   background-color: #212E30; }
@@ -377,3 +503,14 @@ body {
       color: #62797D;
       font-size: 1em;
       margin-left: 30px; }
+
+@media (max-width: 750px) {
+  .footer__wrap {
+    flex-direction: column; }
+  .footer__list--wrap {
+    width: 90%;
+    justify-content: space-between; }
+  .footer__social {
+    margin-top: 50px; }
+    .footer__social--link {
+      font-size: 2em; } }
